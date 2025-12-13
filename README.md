@@ -24,5 +24,5 @@ Make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/pokemon-fetching-app.git
+   git clone https://github.com/psyminsays/pokemon-fetching-app.git
    cd pokemon-fetching-app
