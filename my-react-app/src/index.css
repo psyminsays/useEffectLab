@@ -28,11 +28,13 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: crimson; /* Change background color to crimson */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: white;  /* Set heading color to white for contrast */
 }
 
 button {
@@ -42,27 +44,36 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: grey; /* Grey background for buttons */
+  color: white; /* Text color for buttons */
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: background-color 0.3s, border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #444; /* Darker grey on hover */
+  border-color: #646cff; /* Adding border color on hover */
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.button-container {
+  background-color: #333; /* Darker grey background behind buttons */
+  padding: 10px; /* Padding around the button container */
+  border-radius: 5px; /* Rounded corners for button container */
+  text-align: center; /* Center align buttons */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #ffffff; /* Adjust background for light mode */
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Light mode button background */
   }
 }
