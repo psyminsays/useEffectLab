@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './App.css'; // Make sure to import your CSS
 
 const App = () => {
     const [pokemon, setPokemon] = useState([]);
@@ -61,12 +62,23 @@ const App = () => {
                 </button>
             </div>
             {selectedPokemon && (
-                <div>
+                <div style={{ marginTop: '20px', padding: '15px', backgroundColor: '#fff', border: '1px solid #ddd', borderRadius: '5px' }}>
                     <h2>{selectedPokemon.name} Details</h2>
                     <p><b>Height:</b> {selectedPokemon.height}</p>
                     <p><b>Weight:</b> {selectedPokemon.weight}</p>
+                    <p><b>Base Experience:</b> {selectedPokemon.base_experience}</p>
                     <p><b>Types:</b> {selectedPokemon.types.map(type => type.type.name).join(', ')}</p>
                     <p><b>Abilities:</b> {selectedPokemon.abilities.map(ability => ability.ability.name).join(', ')}</p>
+                    <div>
+                        <h3>Stats:</h3>
+                        <ul>
+                            {selectedPokemon.stats.map(stat => (
+                                <li key={stat.stat.name}>
+                                    <b>{stat.stat.name}:</b> {stat.base_stat}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                 </div>
             )}
         </div>
