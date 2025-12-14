@@ -1,5 +1,6 @@
-/* App.css */
-
+/* -------------------------------------------------
+   Global layout
+   ------------------------------------------------- */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -7,6 +8,9 @@
   text-align: center;
 }
 
+/* -------------------------------------------------
+   Miscellaneous (logo, card, etc.) – keep if needed
+   ------------------------------------------------- */
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -19,38 +23,99 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-
 @keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
-
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  a:nth-of-type(2) .logo { animation: logo-spin infinite 20s linear; }
 }
+.card { padding: 2em; }
+.read-the-docs { color: #888; }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
+/* -------------------------------------------------
+   Details table (height, weight, types)
+   ------------------------------------------------- */
 table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0; /* Margin around tables */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th,
+td {
+  padding: 15px;
+  border: 1px solid #ffffff; /* white border */
+  text-align: center;
 }
 
-th, td {
-    padding: 15px; /* Cell padding */
-    border: 1px solid #ffffff; /* White border for table cells */
-    text-align: center; /* Centered text */
+/* -------------------------------------------------
+   4 × 5 grid for Pokémon name buttons
+   ------------------------------------------------- */
+.grid-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  max-width: 600px;
+  margin: 1rem auto;
+}
+.grid-buttons button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  color: #333;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.grid-buttons button:hover:not(:disabled) { background-color: #d0d0d0; }
+.grid-buttons button:active:not(:disabled) { background-color: #c0c0c0; }
+.grid-buttons button:disabled {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------
+   Navigation controls (Back / Next) – yellow buttons
+   ------------------------------------------------- */
+.nav-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.nav-controls button {
+  background-color: #ffd700;   /* golden yellow */
+  color: #333;
+  border: 1px solid #b0b0b0;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.nav-controls button:hover:not(:disabled) { background-color: #e6c200; }
+.nav-controls button:active:not(:disabled) { background-color: #cca300; }
+.nav-controls button:disabled {
+  background-color: #f0f0f0;
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* -------------------------------------------------
+   Details card – silver background
+   ------------------------------------------------- */
+.details-card {
+  background-color: #f0f0f0;   /* light silver */
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep the inner table from stretching full width */
+.details-card table {
+  width: auto;
+  margin: 0 auto;
 }
