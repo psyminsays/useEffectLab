@@ -1,7 +1,7 @@
 # Pokémon List Fetching App
 
 ## Description
-This project is a simple React application that fetches Pokémon data from the PokeAPI. Using the `useEffect` hook, it allows users to navigate through a paginated list of Pokémon and view detailed information about individual Pokémon. 
+This project is a simple React application that fetches Pokémon data from the PokeAPI. Using the `useEffect` hook, it allows users to navigate through a paginated list of Pokémon and view detailed information about individual Pokémon.
 
 ## Features
 - Display a list of Pokémon with pagination (Next and Previous buttons).
@@ -17,12 +17,11 @@ This project is a simple React application that fetches Pokémon data from the P
 
 ### Prerequisites
 Make sure you have the following installed:
-- Node.js
+- Node.js (14.x or later)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/psyminsays/pokemon-fetching-app.git
-   cd pokemon-fetching-app
+   git clone https://github.com/psyminsays/useEffectLab.git
